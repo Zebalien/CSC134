@@ -22,7 +22,7 @@ int main() {
 
   //print output
   cout << "Thank you for dining with us." << endl;
-  cout << "Your meal total is$" << mealPrice << endl;
+  cout << "Your meal total is $" << mealPrice << endl;
   cout << "The tax is $" << taxAmount << endl;
   cout << "Your total is $" << total << endl;
   cout << "Please come again." << endl;
