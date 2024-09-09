@@ -1,9 +1,9 @@
-//
+//M2Lab1
 //CSC134
 //Isaac Kasprak
-//9-9-24
+// 9-9-24
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main()
