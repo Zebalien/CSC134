@@ -1,4 +1,4 @@
-//M2Lab1
+//M2Lab1-Case Study
 //CSC134
 //Isaac Kasprak
 // 9-9-24
@@ -8,7 +8,12 @@ using namespace std;
 
 int main()
 {
+    // set up variables
+    string name;
 
-cout << "Hello World!" << endl;
+    // say hi
+    cout << "Hi, what's your name?";
+    cin >> name;
+    cout << "Nice to meet you, " << name << endl;
 
 }
