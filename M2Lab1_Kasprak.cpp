@@ -4,6 +4,7 @@
 // 9-9-24
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -48,11 +49,13 @@ int main()
     profit = customer_price - cost;
 
     // output
-   cout << "Crate is: " << width << "x" << length << "x" << height << endl;
-   cout << "Total volume is: " << volume << " cubic feet." << endl;
-   cout << "The cost to make the crate is: $" << cost << endl;
-   cout << "The price of the crate is: $" << customer_price << endl;
-   cout << "The profit made is: $" << profit << endl;
+    // next line requires iomanip
+    cout << setprecision(2) << fixed;
+    cout << "Crate is: " << width << "x" << length << "x" << height << endl;
+    cout << "Total volume is: " << volume << " cubic feet." << endl;
+    cout << "The cost to make the crate is: $" << cost << endl;
+    cout << "The price of the crate is: $" << customer_price << endl;
+    cout << "The profit made is: $" << profit << endl;
    
 
 }
