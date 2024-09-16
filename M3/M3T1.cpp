@@ -10,5 +10,13 @@
 using namespace std;
 int main()  {
     //set up variable
-    cout << "M3T1" << endl;
+    double width1, width2, length1, length2;
+    double area1, area2;
+
+    cout << "M3T1-Area of two rectagles" << endl;
+    cout << "Width of first rectangle" << endl;
+    cin << width1;
+    cout << "length of first rectangle" << endl;
+    cin << length1;
+
 }
