@@ -1,51 +1,48 @@
-//M3T3-CRAPS
 //CSC134
+//M4T1
 //Isaac Kasprak
-//9-25-24
+//9-30-24
+
+//updated to use multiple functions
 #include <iostream>
-#include <cstdlib> //for rand()
-#include <ctime> //for time()
+
 using namespace std;
 
-int roll() {
-    //get a random number from 1 to 6
-    int die=(rand()%6)+1;
-    return die;
-}
-
+void q1();
+void q2();
 int main()
 {
-    //variables
-    int die1, die2, total;
-    int seed; //random seed
-
-    //input
-    cout << "LETS GO GAMBLING!!! :D" << endl;
-    //cout << "endter your lucky number: ";
-    //cin >> seed;
-    seed=time(0);
-    srand(seed); //rng
-    die1=roll();
-    die2=roll();
-    //die1 = (rand() % 6)+1;
-    //die2 = (rand() % 6)+1;
-
-    //results
-    total=die1+die2;
-
-    //output
-    cout << "Your total is " << die1 << "+" << die2 << "=" << total << endl;
-
-    //did they win or lose?
-    if (total==2||total==3||total==12){
-        cout << "CRAPS! AW MAN D:" << endl;
-    }
-    else if (total==7||total==11){
-        cout << "You Win! :D" << endl;
-    }
-    else{
-        cout << "We are not doing points right now. AW MAN :/" << endl;
-    }
-
+    q1();
+    q2();
     return 0;
+
+}
+//QUESTION 1
+void q1() {
+    cout << "M4T1" << endl;
+    //Part 1
+    cout << "Simple loop" << endl;
+    int num=1;
+    while (num<=5){
+        cout << "num=" << num << endl;
+        num++;
+    }
+    cout << "Finished" << endl;
+    return;
+}
+//QUESTION 2
+void q2() {
+    //Part 2-numbers and squares
+    const int MIN_NUMBER=1;
+    const int MAX_NUMBER=10;
+    //header
+    cout << "Number\t\tNumber Squared" << endl;
+    cout << "--------------------------------------" << endl;
+    int num=MIN_NUMBER;
+    while (num<=MAX_NUMBER){
+        cout << num << "\t\t" << num*num << endl;
+        num++;
+    }
+
+    return;
 }
