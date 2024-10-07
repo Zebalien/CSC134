@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int x;
+    int bottles_of_beer;
     cout << "How many bottles of beer are on the wall?" << endl;
-    cin >> x;
-    while (x>0){
-        cout << x << " bottles of beer on the wall." << endl;
-        cout << x << " bottles of beer." << endl;
+    cin >> bottles_of_beer;
+    while (bottles_of_beer>0){
+        cout << bottles_of_beer << " bottles of beer on the wall." << endl;
+        cout << bottles_of_beer << " bottles of beer." << endl;
         cout << "Take one down, pass it around." << endl;
-        x--;
-        cout << x << " bottles of beer on the wall." << endl;
+        bottles_of_beer--;
+        cout << bottles_of_beer << " bottles of beer on the wall." << endl;
         cout << "---------------------------------------" << endl;
     }
 }
