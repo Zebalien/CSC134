@@ -8,10 +8,14 @@ int main(){
     int level;
     string response;
     string freedom;
+    string answer;
+    string join;
+    string flee;
+    string video;
     cout << "Welcome to experiment 1. :)" << endl;
     cout << "Are you ready to proceed? (yes/no)" << endl;
     cin >> yn;
-    if (yn == "yes") {
+    if (yn == "yes"||yn=="Yes") {
         cout << "Well then, lets proceed" << endl;
         cout << "Infront of you should be the necessary files to continue your research into this anomaly." << endl;
         cout << "Many of the redacted parts include different events caused by his shapeshifting ability." << endl;
@@ -51,11 +55,53 @@ int main(){
                 cout << "You will not be back for another night." << endl;
                 exit(0);
             }
+            else {
+                cout << "Well, I'll escape another day." << endl;
+            }
+            cout << "The phone starts ringing, answer it? (Do you really need options, all of the answers will have a capital in front)" << endl;
+            cin >> answer;
+            if (answer=="Yes"){
+                cout << "Hey, Liam, it's nice to finally reach you. We have been trying to contact you to make you aware of our goal." << endl;
+                cout << "We want you to release all of the monsters. They are crucial for revealing this whole operation. Will you join?" << endl;
+                cin >> join;
+                if(join=="Yes"){
+                    cout << "Great, we want you to press the 5 blue buttons on your console." << endl;
+                    cout << "After all, you won't be back for another night after this." << endl;
+                    exit(0);
+                }
+                else{
+                    cout << "Too bad you don't want to free us." << endl;
+                }
+
+            }
+            else{
+                cout << "You should have answered that Liam, It was really important." << endl;
+            }
+        }
+        else {
+            cout << "I guess no one else is here to free me, you are a lucky man Liam." << endl;
+            cout << endl;
+            cout << "Later in the night you encounter a shadow infront of you" << endl;
+            cout << "You need to flee" << endl;
+            cin >> flee;
+            if (flee=="Flee"||flee=="flee"){
+                cout << "You flee the seen, running into the woods." << endl;
+                cout << "You encounter a house and run up the stairs and find a camera system, open it?" << endl;
+                cin >> video;
+                if(video=="Yes"||video=="yes"){
+
+                }
+            }
+            else{
+                cout << "Well, I thought you would run, it's too late for you now" << endl;
+                exit(0);
+            }
         }
 
     }
     else {
         cout << "Come back when you are." << endl;
+        exit(0);
     }
     return 0;
 }

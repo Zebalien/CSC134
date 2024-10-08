@@ -21,8 +21,8 @@ int main() {
         cout << emoji << endl;
     }
     cout << "Full version: " << endl << endl;
-    const int rows = 4;
-    const int cols = 6;
+    const int rows = 7;
+    const int cols = 3;
     //put both together, to fill in the rectangle
     for (int i=0;i<rows;i++){
         for (int j=0;j<cols;j++){
