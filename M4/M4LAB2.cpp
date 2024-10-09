@@ -87,22 +87,19 @@ bool play_round() {
         total=roll()+roll();
         cout << "Reroll: " << total << endl;
         //keep rolling till win or lose
-        while (total != point && total !=7){
-            
-            if (total==point){
-                is_winner=true;
+        do{
+            total=roll()+roll();
+            cout << "Come on lucky " << point << " rolled: " << total << endl;
+            if (total == 7){
+                is_winner=false;
             }
-            else if (total==7){
-                is_winner = false;
+            if (total == point) {
+                is_winner = true;
             }
-            else{
-                //keep rolling
-                total=roll()+roll();
-                cout << "Reroll: " << total << endl;
-            }
+        } while (total !=7 && total != point);
         }
         //cout << "We are not doing points right now. AW MAN :/" << endl;
  
-    }
+    
     return is_winner;
 }
