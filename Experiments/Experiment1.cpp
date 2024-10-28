@@ -5,6 +5,9 @@
 #include <iostream>
 using namespace std;
 void fleeEncounter();
+void cameras();
+void history();
+void watch();
 void welcome() {
     cout << "Welcome to experiment 1. :)" << endl;
     cout << "Are you ready to proceed? (yes/no)" << endl;
@@ -33,28 +36,31 @@ void handleResponseYes() {
     string freedom;
     cout << "Oh thank God there is someone else here. Can you let me out? (Yes/No)" << endl;
     cin >> freedom;
-    if (freedom == "Yes") {
+    if (freedom == "Yes"||freedom=="yes") {
         cout << "Thank you, you gullible test subject" << endl;
         anomalyEscaped();
     } else {
         cout << "Well, I'll escape another day." << endl;
     }
-
+    void handleResponseNo();
     string answer;
     cout << "The phone starts ringing, answer it? (Yes/No)" << endl;
     cin >> answer;
-    if (answer == "Yes") {
+    if (answer == "Yes"||answer=="yes") {
         string join;
-        cout << "Hey, Liam, it's nice to finally reach you. We want you to release all of the monsters. Will you join?" << endl;
+        cout << "Hey, Liam, it's nice to finally reach you. We want you to release all of the monsters. Will you join?(Yes/No)" << endl;
         cin >> join;
-        if (join == "Yes") {
+        if (join == "Yes"||join=="yes") {
             cout << "Great, press the 5 blue buttons on your console." << endl;
             anomalyEscaped();
         } else {
             cout << "Too bad you don't want to free us." << endl;
+            void handleResponseNo();
+            handleResponseNo();
         }
     } else {
         cout << "You should have answered that, Liam. It was really important." << endl;
+        handleResponseNo();
     }
 }
 
@@ -66,7 +72,7 @@ void handleResponseNo() {
 
 void fleeEncounter() {
     string flee;
-    cout << "You need to flee. Flee? (Yes/No)" << endl;
+    cout << "You need to flee." << endl;
     cin >> flee;
     if (flee == "Flee" || flee == "flee") {
         cout << "You flee the scene, running into the woods." << endl;
@@ -74,7 +80,7 @@ void fleeEncounter() {
         cout << "You encounter a house and run up the stairs and find a camera system, open it? (Yes/No)" << endl;
         cin >> video;
         if (video == "Yes" || video == "yes") {
-            // Placeholder for camera system logic
+            cameras();
         }
     } else {
         cout << "Well, I thought you would run; it's too late for you now." << endl;
@@ -105,7 +111,7 @@ int main() {
         cout << "Respond? (Yes/No)" << endl;
         cin >> response;
 
-        if (response == "Yes") {
+        if (response == "Yes"||response=="yes") {
             handleResponseYes();
         } else {
             handleResponseNo();
@@ -114,6 +120,21 @@ int main() {
         cout << "Come back when you are ready." << endl;
         exit(0);
     }
-
     return 0;
+}
+void cameras(){
+        string file;
+        cout << "You open the camera system and see a file. Do you open it?(Yes/No)" << endl;
+        cin >> file;
+        if(file=="yes"||file=="Yes"){
+            history();
+        } else {
+            watch();
+        }
+}
+void history(){
+
+}
+void watch(){
+
 }
